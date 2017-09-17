@@ -7,6 +7,28 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  	<header>
+  		<nav class="be-red white">
+  			<ul class="no-list row center-xs">
+  			    <li class="col-md">
+  			    	<%= link_to "Home", root_path %>
+  			    </li>
+  			    <li class="col-md">
+  			    	<%= link_to "Design", root_path %>	    	
+  			    </li>
+  			    <li class="col-md">
+  			    	<%= link_to "Programming", root_path %> 			    	
+  			    </li>
+  			    <li class="col-md">
+  			    	<%= link_to "Technology", root_path %>
+  			    	
+  			    </li>
+
+  			</ul>
+  			
+  		</nav>
+  		
+  	</header><!-- /header -->
 
   <body>
     <%= yield %>
