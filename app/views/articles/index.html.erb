@@ -1,0 +1,17 @@
+<h1>Welcome to Article</h1>
+
+<p>by Mawel Mirabal</p>
+
+<%= @articles.inspect %>
+
+
+
+
+
+<% @articles.each do |article| %>
+
+	<h1><%= article.title %></h1>
+		<div>
+			<%= article.body %>
+		</div>
+<%end%>

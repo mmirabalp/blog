@@ -1,0 +1,36 @@
+html, body{
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+	color: rgb(200, 50, 50);
+}
+a,a:visited{
+	color: inherit;
+	text-decoration: none;
+}
+.logo{
+	font-size: 1.2em;
+}
+
+.no_margin{
+	margin: 0px;
+}
+
+.be_red{
+	background-color: rgb(255, 90, 67);
+}
+
+.white{
+	color: rgb(255, 255, 255);
+}
+
+.large_padding{
+	padding: 15px 10px;
+}
+
+.li_a{
+    text-decoration: none;
+    color: #f5f7f8;
+    padding: 0 0 .2rem;
+    /* font-weight: 700; */
+}
+

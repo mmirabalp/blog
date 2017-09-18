@@ -13,8 +13,9 @@ default: &default
 #development:
 #  <<: *default
 #  database: db/development.sqlite3
-
 development:
+  <<: *default
+  database: db/test.mysql2
   adapter: mysql2
   encoding: utf8
   database: rails_blog
