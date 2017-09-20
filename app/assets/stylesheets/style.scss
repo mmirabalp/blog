@@ -34,3 +34,33 @@ a,a:visited{
     /* font-weight: 700; */
 }
 
+.form_container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.field{
+  marging-top :1cm;
+}
+
+.form_controls{
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  width: 100%;
+  display: block;
+  padding: 10px 0px;
+  font-size: 1.2em;
+}
+.text_area_form_controls{
+  height: 250px;
+}
+.buttom_submit_form_controls{
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 90, 67);
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 10px 12px;
+}
