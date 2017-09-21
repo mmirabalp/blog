@@ -1,14 +1,7 @@
-<h1>Welcome to Article</h1>
-
-<p>by Mawel Mirabal</p>
-
-<%= @articles.inspect %>
-
-
 
 <% @articles.each do |article| %>
-	<h1><%= article.title %></h1>
+	<h1><%= link_to article.title, article %></h1>
 		<div class="">
-			<%= article.body %> - <%= link_to "Delete", article, method: :delete %>
+			<%= article.body %> - <%= link_to "Delete", article, method: :delete, class:"red_Delete"%>
 		</div>
 <%end%>
