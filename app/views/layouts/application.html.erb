@@ -8,6 +8,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
   	<header>
   		<nav class="be_red white large_padding">
   			<ul class="no-list row center-xs middle-xs">
@@ -16,23 +20,23 @@
   			    	<%= link_to "Home", root_path %>
   			    </li>
   			    <li class="col-md">
-  			    	<%= link_to "Design", root_path %>	    	
+  			    	<%= link_to "Design", root_path %>
   			    </li>
   			    <li class="col-md">
-  			    	<%= link_to "Programming", root_path %> 			    	
+  			    	<%= link_to "Programming", root_path %>
   			    </li>
   			    <li class="col-md">
   			    	<%= link_to "Technology", root_path %>
-  			    	
+
   			    </li>
 
   			</ul>
-  			
+
   		</nav>
-  		
+
   	</header><!-- /header -->
 
-  <body>
+
     <%= yield %>
   </body>
 </html>
