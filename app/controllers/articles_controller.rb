@@ -1,12 +1,17 @@
 class ArticlesController < ApplicationController
-	#GET /articles
+  # before_action :validate_user, except: [:show, :index]
+  before_action :authenticate_user!, except: [:show,:index]
+  before_action :set_article, except: [:index,:new,:create]
+
+  #GET /articles
 	def index
     # All field from Article (SELECT * FROM articles)
 		@articles = Article.all
 	end
 	#GET /articles/:id
 	def show
-		@article = Article.find(params[:id])
+		# @article = Article.find(params[:id])
+    @article.update_visits_count
 	end
 
 	#GET /articles/new
@@ -16,7 +21,7 @@ class ArticlesController < ApplicationController
 
 
   def edit
-    @article = Article.find(params[:id])
+    # @article = Article.find(params[:id])
   end
 
   # POST /articles
@@ -33,7 +38,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/:id
   def destroy
     # DELETE FROM  articles
-    @article = Article.find(params[:id])
+
     @article.destroy # Destroy: Delete object from Data Base
     redirect_to articles_path
   end
@@ -42,7 +47,7 @@ class ArticlesController < ApplicationController
   def update
     # UPDATE
     # @article.update_attributes({title: 'New Titile'})
-    @article = Article.find(params[:id])
+    # @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to @article
     else
@@ -51,6 +56,14 @@ class ArticlesController < ApplicationController
   end
 
   private
+    def set_article
+      #code
+      @article = Article.find(params[:id])
+    end
+    def validate_user
+      #code
+      redirect_to new_user_session_path, notice: "You Need to Start Session"
+    end
     def article_params
       params.require(:article).permit(:title,:body)
     end
